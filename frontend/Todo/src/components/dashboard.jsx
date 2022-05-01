@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Form from "./Form";
-import ToDos from "./toDo";
+// import ToDos from "./toDo";
 import ToDoList from "./toDoList";
 
 function Main() {
@@ -18,7 +18,7 @@ function Main() {
 
   const [status, setStatus] = useState("");
 
-  const [filteredTodos, setfilteredTodos] = useState("");
+  const [filteredTodos, setfilteredTodos] = useState([]);
 
   const filterHandler = () => {
     switch (status) {
@@ -42,7 +42,7 @@ function Main() {
     e.preventDefault();
 
     const data = { res };
-    const url = "http://localhost:4000/login";
+    const url = "http://localhost:4000/list";
     fetch(url, {
       headers: {
         "content-Type": "application/json",
@@ -57,6 +57,12 @@ function Main() {
         console.log("Error", error);
       });
   };
+  
+
+
+  
+  
+
   return (
     <div className="bg-gradient-to-b from-blue-100 to-blue-200 h-screen overflow-hidden">
       <Form

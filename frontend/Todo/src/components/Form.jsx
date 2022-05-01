@@ -7,17 +7,41 @@ function Form({ setInput, input, toDo, setToDo, setStatus }) {
     console.log("user logged out");
     navigate("/signIn");
   };
+  const [todoInput, settodoInput] =  useState([])
+
   const handleInputChange = (e) => {
     setInput(e.target.value);
+    settodoInput({...todoInput, [e.target.name] : e.target.value})
+    // setData({ ...data, [input.name]: input.value });
   };
-  const handleAdd = (e) => {
+
+  const handleAdd = async (e) => {
+
     e.preventDefault();
-    setToDo([
-      ...toDo,
-      { Text: input, completed: false, id: Math.random() * 1000 },
-    ]);
-    setInput("");
-    e.target.value = "";
+    // e.target.value = "";
+    const url = "http://localhost:4000/createTodo";      
+    await fetch(url, {
+      method:"POST",
+      headers: {
+        "content-Type": "application/json",
+      },
+      body: JSON.stringify(todoInput),
+    })
+    .then((response) => {
+      return response.json()
+    }
+    )
+    .then((data) => {
+      setToDo([
+        ...toDo,
+        { Text: input, completed: false, id: data.data._id},
+      ]);
+      console.log(data.data._id)
+          console.log("success:", data.data.todoId);
+        })
+        .catch((error) => {
+          console.log("Error", error);
+        });
   };
 
   const statusHandler = (e) => {
@@ -40,7 +64,8 @@ function Form({ setInput, input, toDo, setToDo, setStatus }) {
             className="w-500px h-full rounded-sm focus:outline-none focus:border-red-500 focus:ring-sky-500 font-serif"
             placeholder="Add a new toDo"
             onChange={handleInputChange}
-            value={input}
+            name="toDo"
+           
           />
           <button
             className="ml-32 w-32 h-8 mt-2 rounded-sm bg-green-200 text-white font-serif text-4"
