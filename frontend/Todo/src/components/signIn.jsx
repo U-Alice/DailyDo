@@ -16,7 +16,7 @@ function SignIn() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     // try {
-    const url = "http://localhost:4000/login";
+    const url = "http://localhost:4000/api/login";
     await fetch(url, {
       method: "post",
       headers: {
@@ -44,17 +44,17 @@ function SignIn() {
   };
 
   return (
-    <div className="bg-cover bg-gradient-to-l from-white to-cyan-100 h-screen flex">
+    <div className="bg-cover bg-gradient-to-l from-blue-100 to-blue-300 h-screen flex">
       <div className="mt-64 mx-52">
-        <h1 className="text-orange-400 text-9xl font-sans">DailyDo</h1>
+        <h1 className="text-green-100 text-9xl font-greatVibes">DailyDO</h1>
         <div>
-          <img></img>
+          <img src="https://cdn.sanity.io/images/jx1km445/production/4887f85010575838ebade14cc572cf8f694f9af7-1200x900.png" className="w-96"></img>
         </div>
       </div>
 
-      <div className="w-1/3 h-96 bg-slate-100 rounded-xl shadow-lg shadow-slate-300 sticky items-center mx-0 mt-32 p-0">
+      <div className="w-1/3 h-96 bg-slate-100 rounded-xl shadow-lg shadow-slate-300 sticky items-center mx-0 mt-32 p-0 bg-orange-100">
         <div>
-          <h1 className="font-serif block mt-px text-orange-400 text-2xl mx-12">
+          <h1 className="font-serif block text-green-500 text-2xl ml-52 mt-4">
             LOGIN
           </h1>
         </div>
@@ -100,7 +100,7 @@ function SignIn() {
             </button>
 
             <Link to="/signup">
-              <button className="font-serif bg-orange-300 h-8 w-1/2  rounded-lg mt-5 text-white mx-4">
+              <button className="font-serif bg-green-300 h-8 w-1/2  rounded-lg mt-5 text-white mx-4">
                 SignUp
               </button>
             </Link>

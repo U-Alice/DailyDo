@@ -60,14 +60,14 @@ function Signup() {
 }
 
   return (
-    <div className="bg-cover bg-gradient-to-l from-white to-cyan-100 h-screen flex">
+    <div className="bg-cover bg-gradient-to-l from-blue-200 to-blue-300 h-screen flex">
       <div className="mt-64 mx-36 w-1/3 ">
-        <h1 className="text-orange-400 text-6xl font-sans mx-16">DailyDO</h1>
+        <h1 className="text-green-200 text-9xl font-greatVibes  mx-16">DailyDO</h1>
         <div><img src='https://cdn.sanity.io/images/jx1km445/production/0b1952749ef9f22ea5b0dd52dce3ecffba8821f1-1200x900.png'/></div>
       </div>
       <div className="w-1/3 h-5/6 bg-slate-100 rounded-xl shadow-lg shadow-slate-300 sticky items-center mx-auto mt-16  p-0">
         <div>
-          <h1 className="font-serif block mt-px text-orange-400 text-2xl mx-12 mt-4">
+          <h1 className="font-serif block mt-px text-green-400 text-2xl mx-12 mt-4">
             SIGN UP
           </h1>
         </div>
@@ -165,7 +165,7 @@ function Signup() {
                 SignUp
               </button>
             <Link to="/signIn">
-              <button className="font-serif bg-orange-300 h-8 w-1/2  rounded-lg mt-5 text-white mx-4">
+              <button className="font-serif bg-green-300 h-8 w-1/2  rounded-lg mt-5 text-white mx-4">
                 LOGIN
               </button>
             </Link>

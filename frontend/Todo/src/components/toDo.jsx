@@ -6,9 +6,10 @@ function ToDos({ text, toDos, toDo, setToDo }) {
   const deleteHandler = async (e) => {
     console.log(toDo)
     e.preventDefault();
-    Navigate(`main/${toDo.id}`);
+    // Navigate(`main/${toDo.id}`);
     setToDo(toDos.filter((el) => el.id !== toDo.id)); 
-      const url = "http://localhost:4000/delete/:id";
+
+      const url = `http://localhost:4000/api/toDo/${toDo.id}`;
       await fetch(url, {  
         method:"DELETE",
         headers: {
@@ -23,7 +24,7 @@ function ToDos({ text, toDos, toDo, setToDo }) {
       .catch((error) => {
         console.log("Error", error);
       });
-      Navigate("/main");
+      // Navigate("/main");
     
   };
 
@@ -41,22 +42,22 @@ function ToDos({ text, toDos, toDo, setToDo }) {
     );
   };
   return (
-    <div className="mx-96 mt-8 w-screen">
-      <div className=" bg-white h-12 rounded-sm w-1/2 border border-orange-100 flex">
+    <div className="w-3/4 mt-8 ">
+      <div className=" bg-white h-12 rounded-sm ml-16 border border-blue-100 flex">
         <div
-          className={`pt-2 font-serif ${toDo.completed ? "line-through" : ""}`}
+          className={`pt-2 pl-4 font-serif ${toDo.completed ? "line-through" : ""}`}
         >
           {text}
         </div>
-        <div className=" gap-4 pt-2 font-serif text-slate-800 flex absolute left-1/2 mx-56">
+        <div className=" gap-4 pt-2 font-serif text-slate-800 flex absolute left-1/2 ">
           <button
-            className="h-8 w-16 bg-green-200 rounded-sm"
+            className="h-8 w-20 text-white bg-green-200 rounded-sm"
             onClick={completedHandler}
           >
             completed
           </button>
           <button
-            className="h-8 w-16 bg-red-200 rounded-sm"
+            className="h-8 w-16 bg-red-200 text-white rounded-sm"
             onClick={deleteHandler}
           >
             Delete

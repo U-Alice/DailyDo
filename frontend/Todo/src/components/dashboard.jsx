@@ -64,7 +64,7 @@ function Main() {
   
 
   return (
-    <div className="bg-gradient-to-b from-blue-100 to-blue-200 h-screen overflow-hidden">
+    <div className="bg-blue-300  h-600px w-1/2 ml-96 mt-12 rounded-sm overflow-x-hidden">
       <Form
         setInput={setInput}
         setToDo={setToDo}
@@ -74,6 +74,7 @@ function Main() {
         setfilteredTodos={setfilteredTodos}
       />
       <ToDoList toDoss={toDo} setToDo={setToDo}  filteredTodos={filteredTodos}/>
+      
     </div>
   );
 }

@@ -11,6 +11,8 @@ import Home from "./components/home";
 class App extends Component {
   render(){
   return (
+    // < Home />
+    // <div><p>Hello world</p></div>
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />

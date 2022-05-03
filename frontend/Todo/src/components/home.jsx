@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 function Home() {
   return (
-    <div className="h-screen bg-no-repeat bg-cover bg-gradient-to-l  from-white to-cyan-100 flex overflow-hidden">
+    <div className="h-screen bg-no-repeat bg-cover bg-gradient-to-l from-blue-300 to-blue-200 flex overflow-hidden">
       {/* <nav className="bg-orange-200 h-50px text-blue-700 ">
         <ul>
           <li className="inline mx-12">
@@ -18,12 +18,12 @@ function Home() {
         </ul>
       </nav> */}
       <div className="text-white mt-64 h-100vh bg-no-repeat mx-32">
-        <p className="text-9xl text-orange-200">DailyDo</p>
-        <p className="text-xl font-serif text-slate-600">
+        <p className="text-9xl text-green-200 font-greatVibes dropshadow">DailyDo</p>
+        <p className="text-xl font-quickSand text-slate-600">
           End your schedule struggles, Plan your day Live to your best
         </p>
       </div>
-      <div className="h-1/2 w-1/3 font-serif mx-32 mt-64">
+      <div className="h-1/2 w-1/3 font-serif mx-32 mt-64 ">
         <div className="flex w-64">
           <img src="https://cdn.sanity.io/images/jx1km445/production/4887f85010575838ebade14cc572cf8f694f9af7-1200x900.png" />
           <img src="https://cdn.sanity.io/images/jx1km445/production/9ce6a60e9fa8c0bd751be3b5169c82d8adab3979-1200x900.png" />

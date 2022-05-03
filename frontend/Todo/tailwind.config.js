@@ -14,11 +14,14 @@ module.exports = {
       height:{
         '50px':'50px',
         '50%':'50%',
-        '100vh':'100vh'
+        '600px':'600px'
       },
       fontFamily:{
-        'sans':['Great Vibes'],
-        'serif': ['Ms Madi']
+        'mont':['mont'],
+        'MsMadi': ['Ms Madi'],
+        'quickSand':['quick sand'],
+        'greatVibes':['Great Vibes']
+
       },
       width: {
         '100px':'100px',
